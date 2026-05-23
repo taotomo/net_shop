@@ -1,0 +1,22 @@
+/* =================================================================
+    shops-index.css — ショップ一覧ページ専用スタイル
+    対応ファイル: resources/views/shops/index.blade.php
+    app.css の後に読み込まれます
+    ※ グリッドレイアウト（.grid / .grid-item）は app.css に定義済み
+================================================================= */
+
+
+/* ----- ショップカードのアイコンエリア -----
+   各ショップカード上部に表示するピンク背景のアイコン枠 */
+.shop-thumb {
+    height: 80px;
+    background: #fce4ec;            /* 薄いピンク */
+    display: flex;
+    align-items: center;            /* 縦中央 */
+    justify-content: center;        /* 横中央 */
+}
+
+/* ショップアイコンの絵文字サイズ */
+.shop-thumb__icon {
+    font-size: 32px;
+}

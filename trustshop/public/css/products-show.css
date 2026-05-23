@@ -1,0 +1,108 @@
+/* =================================================================
+products-show.css — 商品詳細ページ専用スタイル
+対応ファイル: resources/views/products/show.blade.php
+app.css の後に読み込まれます
+================================================================= */
+
+
+/* ----- ページ全体のwrapper -----
+画面中央に幅680pxで表示する
+   （フォームより少し広くして画像を大きく見せる） */
+.product-wrapper {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+
+/* ----- 商品画像エリア（画像あり） -----
+   角丸にしてはみ出た部分を隠す */
+.product-detail__image {
+    border-radius: 6px;
+    overflow: hidden;           /* 角丸からはみ出た画像を隠す */
+    margin-bottom: 20px;
+}
+
+/* 画像本体（横幅いっぱいに広げる） */
+.product-detail__image img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;          /* 比率を保ちながら枠にフィットする */
+}
+
+/* ----- 商品画像エリア（画像なし）-----
+   グレー背景に絵文字を表示するダミーエリア */
+.product-detail__image--empty {
+    height: 200px;
+    background: #F5F5F5;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* ダミーエリアの絵文字サイズ */
+.product-detail__icon {
+    font-size: 64px;
+}
+
+
+/* ----- 商品テキスト情報 ----- */
+
+/* 商品名（h1） */
+.product-detail__name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* 価格（赤色・大きめ） */
+.product-detail__price {
+    color: #E93B6C;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* 在庫数テキスト */
+.product-detail__stock {
+    font-size: 13px;
+    color: #888;
+}
+
+/* 商品説明テキスト（行間を広めにして読みやすくする） */
+.product-detail__desc {
+    margin: 16px 0;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* ----- 購入ボタンエリア -----
+   ボタンの下に余白を空ける */
+.product-detail__buy-form {
+    margin-bottom: 12px;
+}
+
+/* 購入ボタンを横幅いっぱいに広げる */
+.product-detail__buy-btn {
+    width: 100%;
+}
+
+
+/* ----- 戻るリンクエリア -----
+   2つのリンクを横並びにして間隔を空ける */
+.back-link-area {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+
+/* ----- オーナー用ボタンエリア -----
+   編集・削除ボタンを区切り線の下に表示する */
+.product-detail__actions {
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+}

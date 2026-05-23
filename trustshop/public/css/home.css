@@ -1,0 +1,79 @@
+/* =================================================================
+home.css — ホーム画面（全商品一覧）専用スタイル
+対応ファイル: resources/views/home/index.blade.php
+================================================================= */
+
+
+/* ----- カテゴリ絞り込みバー -----
+   画面上部にカテゴリボタンを横並びで表示する */
+.category-filter {
+    margin-bottom: 20px;
+}
+
+.category-filter__list {
+    display: flex;
+    flex-wrap: wrap;    /* 画面が狭いとき折り返す */
+    gap: 8px;
+}
+
+/* カテゴリボタン（非選択） */
+.category-btn {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #555;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.category-btn:hover {
+    border-color: #E93B6C;
+    color: #E93B6C;
+}
+
+/* カテゴリボタン（選択中） */
+.category-btn--active {
+    background: #E93B6C;
+    border-color: #E93B6C;
+    color: #fff;
+}
+
+
+/* ----- 商品カードのカテゴリバッジ ----- */
+.product-category-badge {
+    display: inline-block;
+    background: #f0f0f0;
+    color: #555;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+
+/* ----- 商品グリッドの画像エリア -----
+   ※ shops-show.css と同じ定義（ページが独立しているため再定義） */
+.product-thumb {
+    height: 120px;
+    overflow: hidden;
+}
+
+.product-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-thumb--empty {
+    height: 120px;
+    background: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-thumb__icon {
+    font-size: 40px;
+}

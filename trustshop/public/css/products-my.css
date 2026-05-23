@@ -1,0 +1,50 @@
+/* =================================================================
+products-my.css — 出品商品一覧ページ専用スタイル
+対応ファイル: resources/views/products/my.blade.php
+================================================================= */
+
+
+/* ----- ショップ名のサブテキスト -----
+   グリッドカード内の「どのショップの商品か」を示すテキスト */
+.my-product__shop {
+    font-size: 11px;
+    color: #aaa;
+    margin-bottom: 2px;
+}
+
+
+/* ----- カテゴリバッジ ----- */
+.product-category-badge {
+    display: inline-block;
+    background: #f0f0f0;
+    color: #555;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+
+/* ----- 商品グリッドの画像エリア ----- */
+.product-thumb {
+    height: 120px;
+    overflow: hidden;
+}
+
+.product-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-thumb--empty {
+    height: 120px;
+    background: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-thumb__icon {
+    font-size: 40px;
+}

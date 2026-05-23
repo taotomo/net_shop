@@ -1,0 +1,85 @@
+/* =================================================================
+shops-show.css — ショップ詳細ページ専用スタイル
+対応ファイル: resources/views/shops/show.blade.php
+app.css の後に読み込まれます
+================================================================= */
+
+
+/* ----- ショップ情報カード -----
+ページ上部のショップ情報を囲むカード
+下に商品一覧との間のスペースを空ける */
+.shop-card {
+    margin-bottom: 24px;
+}
+
+
+/* ----- ショップ情報ヘッダー -----
+ショップ名（左）と編集・削除ボタン（右）を
+左右に分けて配置する */
+.shop-info-header {
+    display: flex;
+    justify-content: space-between; /* 左右に分ける */
+    align-items: flex-start;        /* 上揃え */
+    flex-wrap: wrap;                /* 画面が狭いとき折り返す */
+    gap: 12px;
+}
+
+/* ショップ名（h1） */
+.shop-name {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+/* ショップ説明・サブテキスト */
+.shop-sub {
+    color: #888;
+    font-size: 14px;
+}
+
+
+/* ----- 商品一覧セクションのタイトル -----
+   「商品一覧」などの中見出し（h2） */
+.section-title {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+
+/* ----- 商品グリッドの画像エリア -----
+   グリッドカード上部に商品画像を表示する */
+.product-thumb {
+    height: 120px;
+    overflow: hidden;               /* はみ出た部分を隠す */
+}
+
+/* 商品画像（枠全体にフィットさせる） */
+.product-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;              /* 比率を保ちながら枠にフィットする */
+}
+
+/* 画像がないときのダミーエリア（グレー背景＋絵文字） */
+.product-thumb--empty {
+    height: 120px;
+    background: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ダミーエリアの絵文字サイズ */
+.product-thumb__icon {
+    font-size: 40px;
+}
+
+
+/* ----- 在庫数テキスト -----
+   グリッドカード内の「在庫: ○点」テキスト */
+.stock-text {
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+}
