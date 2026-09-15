@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./trustshop:/var/www/html
-    ports:git init
+    ports:
       - 8000:80
     depends_on:
       - db_trustshop
